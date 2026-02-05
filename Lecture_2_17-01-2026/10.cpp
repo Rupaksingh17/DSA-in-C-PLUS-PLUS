@@ -11,5 +11,5 @@ int main()
         
         fact=fact*i;
     }
-    cout<<fact;
+    cout<<fact<<endl;
 }
