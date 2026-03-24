@@ -2,17 +2,17 @@
 using namespace std;
 int main()
 {
-    int gas;
     cout<<"Gas:";
+int gas;
     cin>>gas;
-     int gasarr[gas];
-     int costarr[gas];
-     cout<<"Enter Gas Values: ";
+    int gasarr[gas];
+    int costarr[gas];
+    cout<<"Enter the gas for values: ";
     for(int i=0;i<gas;i++)
     {
         cin>>gasarr[i];
     }
-    cout<<"Enter Cost Values: ";
+    cout<<"Enter the cost of values:";
     for(int i=0;i<gas;i++)
     {
         cin>>costarr[i];
@@ -21,20 +21,19 @@ int main()
     for(int j=0;j<gas;j++)
     {
         int diff=gasarr[j]-costarr[j];
-      total=total+diff;
-      fuel=fuel+diff;
-      if(fuel<0)
-      {
-        start=j+1;
-        fuel=0;
-      }
+        total +=diff;
+        fuel +=diff;
+        if(fuel<0)
+        {
+            start=j+1;
+            fuel=0;
+        }
     }
-    if(total<0)
-    {
-    cout<<-1;
-    }
-    else
-    {
-    cout<<start<<endl;
-    }
+        if(total<0)
+        {
+            cout<<-1;
+        }
+        else {
+            cout<<start;
+        }
 }
